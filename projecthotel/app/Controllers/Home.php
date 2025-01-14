@@ -4,13 +4,14 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index()
+    public function home()
     {
-        // return view(name: 'layouts/navbar').
-        // view('home/index').
-        // view(name: 'layouts/footer');
+        return view(name: 'layouts/header').
+        view(name: 'layouts/navbar').
+        view(name: 'home/homePage').
+        view(name: 'layouts/footer');
 
-        echo "tas";
+        //echo "tas";
     }
 
 }

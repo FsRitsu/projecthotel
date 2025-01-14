@@ -116,4 +116,18 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- JQuery Tambahan        -->
+<!-- <script type="text/javascript">
+        $(document).ready(function(){
+        $('#ttlHome').click(function(){
+            $('#ttlHead').html('Home');
+        });
+        $('#ttlPages').click(function(){
+            $('#ttlHead').html('Pages');
+        });
+        $('#ttlAbout').click(function(){
+            $('#ttlHead').html('About Us');
+        });
+        });
+</script> -->
