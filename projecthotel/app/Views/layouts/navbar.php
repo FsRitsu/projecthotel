@@ -36,21 +36,37 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="index.html" class="nav-item nav-link">Home</a>
-                                <a href="about.html" class="nav-item nav-link active">About</a>
-                                <a href="service.html" class="nav-item nav-link">Services</a>
-                                <a href="room.html" class="nav-item nav-link">Rooms</a>
+                                <a href="/" class="nav-item nav-link">Home</a>
+                                <a href="/about" class="nav-item nav-link active">About</a>
+                                <a href="/services" class="nav-item nav-link">Services</a>
+                                <a href="/rooms" class="nav-item nav-link">Rooms</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="booking.html" class="dropdown-item">Booking</a>
-                                        <a href="team.html" class="dropdown-item">Our Team</a>
-                                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                        <a href="/booking" class="dropdown-item">Booking</a>
+                                        <a href="" class="dropdown-item">Our Team</a>
+                                        <a href="" class="dropdown-item">Testimonial</a>
                                     </div>
                                 </div>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
-                            <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a>
+                            <div>
+                                <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+                                <!-- sebelum login -->
+                                <div id="loginWrapper">
+                                    <a href="/login" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">
+                                        Login <i class="fa fa-arrow-right ms-3"></i>
+                                    </a>
+                                </div>
+
+                                <!-- sesudah login -->
+                                <div id="welcomeWrapper" style="display: none;">
+                                    <div class="text-center">
+                                        <h4>Welcome back, User!</h4>
+                                        <button id="logoutBtn" class="btn btn-danger mt-3">Logout</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </nav>
                 </div>
@@ -58,7 +74,7 @@
         </div>
     
 
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+        <div class="container-fluid page-header p-0" style="background-image: url(img/carousel-1.jpg);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
@@ -73,50 +89,7 @@
             </div>
         </div>
 
-        <!-- booking bar -->
-        <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="bg-white shadow" style="padding: 35px;">
-                    <div class="row g-2">
-                        <div class="col-md-10">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Adult</option>
-                                        <option value="1">Adult 1</option>
-                                        <option value="2">Adult 2</option>
-                                        <option value="3">Adult 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Child</option>
-                                        <option value="1">Child 1</option>
-                                        <option value="2">Child 2</option>
-                                        <option value="3">Child 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    
         <!-- JQuery Tambahan        -->
 <!-- <script type="text/javascript">
         $(document).ready(function(){
@@ -131,3 +104,38 @@
         });
         });
 </script> -->
+
+<!-- Tes -->
+ <!-- <script>
+    $(document).ready(function () {
+      // Simulasi status login (false = belum login, true = sudah login)
+      let isLoggedIn = false;
+
+      // Atur tampilan awal berdasarkan status login
+      function updateUI() {
+        if (isLoggedIn) {
+          $("#loginWrapper").hide(); // Sembunyikan tombol login
+          $("#welcomeWrapper").show(); // Tampilkan pesan selamat datang
+        } else {
+          $("#loginWrapper").show(); // Tampilkan tombol login
+          $("#welcomeWrapper").hide(); // Sembunyikan pesan selamat datang
+        }
+      }
+
+      // Ketika tombol login diklik
+      $("#loginWrapper a").click(function (e) {
+        e.preventDefault(); // Mencegah aksi default
+        isLoggedIn = true; // Ubah status menjadi login
+        updateUI(); // Perbarui UI
+      });
+
+      // Ketika tombol logout diklik
+      $("#logoutBtn").click(function () {
+        isLoggedIn = false; // Ubah status menjadi logout
+        updateUI(); // Perbarui UI
+      });
+
+      // Inisialisasi UI
+      updateUI();
+    });
+  </script> -->
