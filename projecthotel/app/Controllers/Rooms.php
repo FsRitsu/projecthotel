@@ -7,7 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class Rooms extends BaseController
 {
-    public function rooms()
+    public function index()
     {
         return view(name: 'layouts/header').
         view(name: 'layouts/navbar').

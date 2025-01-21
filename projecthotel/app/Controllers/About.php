@@ -7,7 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class About extends BaseController
 {
-    public function about()
+    public function index()
     {
         // return view('about/aboutPage');
         return view(name: 'layouts/header').

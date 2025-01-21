@@ -7,7 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class Services extends BaseController
 {
-    public function services()
+    public function index()
     {
         return view(name: 'layouts/header').
         view(name: 'layouts/navbar').
